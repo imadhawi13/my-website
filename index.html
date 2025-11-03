@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROWD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<!-- Admin Icon Top Right -->
+<div id="adminIcon" title="Admin Login">🛠️</div>
+
+<!-- Employee Icon Login -->
+<div id="employeeIcon" title="Employee Login">👤</div>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <h2 id="loginTitle">Login</h2>
+    <input type="text" id="loginName" placeholder="Your Name">
+    <input type="password" id="loginCode" placeholder="Your Code">
+    <button onclick="login()">Enter</button>
+  </div>
+</div>
+
+<!-- Admin Dashboard -->
+<div id="adminPanel" class="dashboard">
+  <button class="backButton" onclick="logout()">⬅ Back</button>
+  <h1>Admin Panel</h1>
+
+  <!-- Employees -->
+  <div class="window">
+    <h2>Employees</h2>
+    <input type="text" id="empName" placeholder="Employee Name">
+    <input type="text" id="empCode" placeholder="Employee Code">
+    <button onclick="addEmployee()">Add Employee</button>
+    <div id="employeeList"></div>
+  </div>
+
+  <!-- Schedule -->
+  <div class="window">
+    <h2>Schedule</h2>
+    <input type="text" id="scheduleText" placeholder="Schedule text">
+    <input type="file" id="scheduleFile" multiple>
+    <button onclick="addSchedule()">Add Schedule</button>
+    <div id="scheduleList"></div>
+  </div>
+
+  <!-- Events -->
+  <div class="window">
+    <h2>Events</h2>
+    <input type="date" id="eventDate">
+    <input type="text" id="eventText" placeholder="Event text">
+    <input type="file" id="eventFile" multiple>
+    <button onclick="addEvent()">Add Event</button>
+    <div id="eventList"></div>
+  </div>
+
+  <!-- Reports -->
+  <div class="window">
+    <h2>Reports</h2>
+    <div id="reportsList"></div>
+  </div>
+</div>
+
+<!-- Employee Dashboard -->
+<div id="employeePanel" class="dashboard">
+  <button class="backButton" onclick="logout()">⬅ Back</button>
+  <h1>Employee Panel</h1>
+
+  <div class="window">
+    <h2>Schedule</h2>
+    <div id="empScheduleList"></div>
+  </div>
+
+  <div class="window">
+    <h2>Events</h2>
+    <div id="empEventList"></div>
+  </div>
+
+  <div class="window">
+    <h2>Send Report</h2>
+    <textarea id="empReport" placeholder="Write your report here"></textarea>
+    <button onclick="sendReport()">Send</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

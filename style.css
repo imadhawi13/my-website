@@ -1,0 +1,48 @@
+body,html{margin:0;padding:0;font-family:'Segoe UI',sans-serif;}
+.background{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:linear-gradient(135deg,#1a2a6c,#b21f1f,#fdbb2d);
+  animation:glow 15s infinite alternate;
+  z-index:-1;
+}
+
+@keyframes glow{
+  0%{filter:brightness(1);}
+  50%{filter:brightness(1.5);}
+  100%{filter:brightness(1);}
+}
+
+.modal{display:none;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);}
+.modal-content{background:#222;color:#fff;padding:20px;border-radius:15px;display:flex;flex-direction:column;gap:10px;min-width:300px;transition:0.3s;}
+.modal-content input{padding:10px;border:none;border-radius:10px;}
+.modal-content button{padding:10px;border:none;border-radius:10px;background:#0ff;color:#000;font-weight:bold;cursor:pointer;transition:0.3s;}
+.modal-content button:hover{background:#0aa;}
+
+#adminIcon{position:fixed;top:15px;right:15px;font-size:2.5rem;cursor:pointer;transition:0.3s;}
+#adminIcon:hover{transform:scale(1.2);}
+
+#employeeIcon{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3rem;cursor:pointer;transition:0.3s;}
+#employeeIcon:hover{transform:scale(1.2) rotate(10deg);}
+
+.dashboard{display:none;padding:20px;overflow-y:auto;max-height:100vh;}
+.dashboard h1{text-align:center;color:#fff;}
+.window{background:rgba(255,255,255,0.1);padding:10px;margin:10px;border-radius:15px;color:#fff;transition:0.3s;backdrop-filter:blur(15px);}
+.window input, .window textarea, .window button{margin:5px 0;padding:10px;border-radius:10px;border:none;}
+.window button{background:#0ff;color:#000;font-weight:bold;cursor:pointer;transition:0.3s;}
+.window button:hover{background:#0aa;transform:scale(1.05);}
+
+#employeeList div,#scheduleList div,#eventList div,#reportsList div,#empScheduleList div,#empEventList div{
+  padding:8px;margin:5px 0;border-radius:10px;background:rgba(255,255,255,0.2);transition:0.3s;cursor:pointer;
+}
+#employeeList div:hover,#scheduleList div:hover,#eventList div:hover,#reportsList div:hover,#empScheduleList div:hover,#empEventList div:hover{
+  background:rgba(0,255,255,0.3);box-shadow:0 0 15px cyan;
+}
+
+.window img{max-width:100%;border-radius:10px;margin-top:5px;}
+.window a{display:block;color:#0ff;margin-top:5px;}
+
+.backButton{
+  background:#0ff;color:#000;font-weight:bold;border:none;padding:8px 15px;border-radius:10px;margin-bottom:10px;cursor:pointer;
+  transition:0.3s;
+}
+.backButton:hover{background:#0aa;transform:scale(1.05);}
